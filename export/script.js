@@ -103,10 +103,7 @@
       if (val == null) return;
       el.textContent = val;
     });
-    document.getElementById('lang-en').classList.toggle('is-active', state.lang === 'en');
-    document.getElementById('lang-en').setAttribute('aria-pressed', state.lang === 'en');
-    document.getElementById('lang-th').classList.toggle('is-active', state.lang === 'th');
-    document.getElementById('lang-th').setAttribute('aria-pressed', state.lang === 'th');
+
     renderFaq();
     renderPlaylist();
     renderRsvpSummary();
