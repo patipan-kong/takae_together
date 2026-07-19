@@ -8,7 +8,7 @@
       hero: { date: "12 December 2026", prompt: "curious what's behind the curtain?", cta: "RSVP", toggle_open: "step inside", toggle_close: "close curtain", playlist_btn: "our playlist", playlist_title: "songs for the day" },
       story: {
         eyebrow: "Our Story", title: "How it began",
-        p1: "We started as two people who kept talking longer than we meant to. Patipan is seven years older, and at some point that started to matter — he began taking care of himself, so he could be around longer. Kanokwan started training too, and has lost 10 kilograms getting ready for this day. On November 3rd, at Labraris Hotel in Khao Yai, it rained. Patipan had a bouquet with him. Kanokwan noticed before he said anything, and said yes anyway.",
+        p1: "We started as two people who kept talking longer than we meant to. Patipan is seven years older, and at some point that started to matter—he began taking care of himself so he could be around longer. Kanokwan joined him, and together they built healthier routines. On November 3rd, at Labraris Hotel in Khao Yai, Patipan arrived carrying a bouquet. Kanokwan smiled the moment she saw it—she already knew what was coming.",
         p2: "They still go to the gym together most days, then look for good coffee after. Patipan says Kanokwan is like a Disney princess — kind to everyone, impossible not to love once you've seen her smile. Kanokwan says he's naturally funny, and being around him has made her calmer."
       },
       timeline: { eyebrow_label: "Arrival", title: "When to Arrive", family_only: "Private Family Ceremony", engagement: "Chinese Engagement Ceremony", tea: "Tea Ceremony", welcome: "Guest Welcome", welcome_sub: "Reception begins", note: "We'll welcome everyone from 11:30. Lunch, conversation and celebration will follow naturally from there." },
@@ -65,8 +65,8 @@
   };
 
   var FAQ_RAW = [
-    { en_q: "What should I wear?", en_a: "Garden-lunch attire in soft, light tones — please avoid white and ivory, and skip black tie.", th_q: "ควรแต่งตัวแบบไหน?", th_a: "แต่งกายสบายๆ โทนอ่อนหวานสำหรับมื้อกลางวัน ขอสงวนสีขาวและงาช้างไว้สำหรับเจ้าสาว และไม่ต้องเป็นทางการมาก" },
-    { en_q: "Is the celebration indoors or outdoors?", en_a: "SOL House is a bright glasshouse venue with garden views all around — fully indoors, so any weather works.", th_q: "งานจัดในร่มหรือกลางแจ้ง?", th_a: "จัดในเรือนกระจกที่ SOL House ซึ่งมีวิวสวนโดยรอบ อยู่ในอาคารทั้งหมด อากาศแบบไหนก็ไม่มีปัญหา" },
+    { en_q: "What should I wear?", en_a: "Smart casual in soft, elegant tones. Sage green, champagne, blush, beige, and light neutrals will suit the setting beautifully. Please avoid all white.", th_q: "ควรแต่งตัวแบบไหน?", th_a: "แต่งกายสบายๆ โทนอ่อนหวานสำหรับมื้อกลางวัน ขอสงวนสีขาวและงาช้างไว้สำหรับเจ้าสาว และไม่ต้องเป็นทางการมาก" },
+    { en_q: "Is the celebration indoors or outdoors?", en_a: "Inside SOL House’s bright glasshouse, surrounded by garden views. You’ll be comfortably indoors, with the feeling of an outdoor celebration.", th_q: "งานจัดในร่มหรือกลางแจ้ง?", th_a: "จัดในเรือนกระจกที่ SOL House ซึ่งมีวิวสวนโดยรอบ อยู่ในอาคารทั้งหมด อากาศแบบไหนก็ไม่มีปัญหา" },
     { en_q: "Can I bring a plus-one or my kids?", en_a: "Seating is arranged per invitation — please reach out to us directly if you have questions.", th_q: "พาคนติดหรือลูกไปด้วยได้ไหม?", th_a: "ที่นั่งจัดตามรายชื่อในบัตรเชิญ หากมีคำถามกรุณาติดต่อเราโดยตรง" },
     { en_q: "What time should I arrive?", en_a: "Please arrive by 11:30 for guest welcome — everything else unfolds naturally from there.", th_q: "ควรไปถึงเวลาไหน?", th_a: "กรุณามาถึงภายใน 11:30 น. เพื่อร่วมต้อนรับแขก จากนั้นทุกอย่างจะดำเนินไปตามธรรมชาติ" },
     { en_q: "Where do I park?", en_a: "On-site parking is available at SOL House Bangkok — follow the signage from the entrance.", th_q: "จอดรถที่ไหน?", th_a: "มีที่จอดรถภายใน SOL House Bangkok กรุณาปฏิบัติตามป้ายบอกทางจากทางเข้า" },
@@ -74,9 +74,9 @@
   ];
 
   var PLAYLIST_RAW = [
-    { moment_en: "Entrance", moment_th: "เดินเข้างาน", title: "Missin' You Like Crazy" },
+    { moment_en: "Entrance", moment_th: "เดินเข้างาน", title: "Speechless" },
     { moment_en: "Cake", moment_th: "ตัดเค้ก", title: "Perfect Two" },
-    { moment_en: "Bouquet", moment_th: "โยนช่อดอกไม้", title: "TBD" }
+    { moment_en: "Bouquet", moment_th: "โยนช่อดอกไม้", title: "Sugar Sugar" }
   ];
 
   var state = {
