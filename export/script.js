@@ -340,12 +340,15 @@
 
   document.getElementById('curtain-toggle').addEventListener('click', function () { setCurtainOpen(!state.curtainOpen); });
 
-  document.getElementById('playlist-toggle').addEventListener('click', function () {
-    state.playlistOpen = !state.playlistOpen;
-    var panel = document.getElementById('playlist-panel');
-    panel.classList.toggle('is-open', state.playlistOpen);
-    this.setAttribute('aria-expanded', state.playlistOpen);
-  });
+  var playlistToggleBtn = document.getElementById('playlist-toggle');
+  if (playlistToggleBtn) {
+    playlistToggleBtn.addEventListener('click', function () {
+      state.playlistOpen = !state.playlistOpen;
+      var panel = document.getElementById('playlist-panel');
+      panel.classList.toggle('is-open', state.playlistOpen);
+      this.setAttribute('aria-expanded', state.playlistOpen);
+    });
+  }
 
   document.getElementById('hero').addEventListener('mousemove', function (e) {
     var r = this.getBoundingClientRect();
