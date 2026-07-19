@@ -8,7 +8,7 @@
       hero: { date: "12 December 2026", prompt: "curious what's behind the curtain?", cta: "RSVP", toggle_open: "step inside", toggle_close: "close curtain", playlist_btn: "our playlist", playlist_title: "songs for the day" },
       story: {
         eyebrow: "Our Story", title: "How it began",
-        p1: "We started as two people who kept talking longer than we meant to. Patipan is seven years older, and at some point that started to matter — he began taking care of himself, so he could be around longer. Kanokwan started training too, and has lost 9–10 kilograms getting ready for this day. On November 3rd, at Labraris Hotel in Khao Yai, it rained. Patipan had a bouquet with him. Kanokwan noticed before he said anything, and said yes anyway.",
+        p1: "We started as two people who kept talking longer than we meant to. Patipan is seven years older, and at some point that started to matter — he began taking care of himself, so he could be around longer. Kanokwan started training too, and has lost 10 kilograms getting ready for this day. On November 3rd, at Labraris Hotel in Khao Yai, it rained. Patipan had a bouquet with him. Kanokwan noticed before he said anything, and said yes anyway.",
         p2: "They still go to the gym together most days, then look for good coffee after. Patipan says Kanokwan is like a Disney princess — kind to everyone, impossible not to love once you've seen her smile. Kanokwan says he's naturally funny, and being around him has made her calmer."
       },
       timeline: { eyebrow_label: "Arrival", title: "When to Arrive", family_only: "Private Family Ceremony", engagement: "Chinese Engagement Ceremony", tea: "Tea Ceremony", welcome: "Guest Welcome", welcome_sub: "Reception begins", note: "We'll welcome everyone from 11:30. Lunch, conversation and celebration will follow naturally from there." },
@@ -31,7 +31,7 @@
       loc: { eyebrow: "Location", address: "Address to be confirmed", parking: "On-site parking available — please follow signage from the entrance.", cta_directions: "Get Directions" },
       faq: { eyebrow_label: "Notes", title: "Good to Know" },
       guestbook: { eyebrow: "Guestbook", title: "Leave Us a Message", desc: "A quick note, a memory, a wish for us — we'll read every one.", button: "Leave Us a Message" },
-      footer: { message: "Thank you for celebrating with us.\nWe'll see you on December 12." }
+      footer: { message: "Thank you for celebrating with us.\nWe'll see you on December 12.\n\n#TaKaeTogether" }
     },
     th: {
       hero: { date: "12 ธันวาคม 2569", prompt: "อยากรู้ไหมว่าหลังม่านมีอะไร?", cta: "ตอบรับคำเชิญ", toggle_open: "ก้าวเข้ามา", toggle_close: "ปิดม่าน", playlist_btn: "เพลย์ลิสต์ของเรา", playlist_title: "เพลงประจำวันนี้" },
