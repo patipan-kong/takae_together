@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kanokwan &amp; Patipan — 12 December 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="root" style="position: relative; width: 100%; background: oklch(96% 0.016 80); overflow-x: hidden;">
+
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button class="lang-btn is-active" id="lang-en" aria-pressed="true" aria-label="English">EN</button>
+    <button class="lang-btn" id="lang-th" aria-pressed="false" aria-label="ภาษาไทย">TH</button>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero grain" id="hero">
+    <div class="hero-bg">
+      <img class="hero-photo" src="assets/DSC05627.JPG" alt="Kanokwan and Patipan"/>
+      <div class="glasspanes"></div>
+      <div class="hero-glint g1"></div>
+      <div class="hero-glint g2"></div>
+      <div class="hero-glint g3"></div>
+      <div class="hero-floor"></div>
+    </div>
+
+    <div class="petal p1"></div>
+    <div class="petal p2"></div>
+    <div class="petal p3"></div>
+    <div class="petal p4"></div>
+
+    <div class="hero-prompt">
+      <div class="hero-prompt-text" data-i18n="hero.prompt"></div>
+    </div>
+
+    <div class="curtain left"></div>
+    <div class="curtain right"></div>
+
+    <div class="hero-top-text">
+      <img class="hero-logo" src="assets/Logo.png" alt="KP Logo"/>
+      <h1 class="hero-name">Kanokwan<br>Patipan</h1>
+      <div class="hero-divider" aria-hidden="true">
+        <span class="line"></span><span class="dot"></span><span class="line"></span>
+      </div>
+    </div>
+
+    <div class="pearl left">
+      <div class="pearl-flower">
+        <div class="pearl-petal" style="left:0;top:4px;width:12px;height:12px;background:oklch(84% 0.09 15);"></div>
+        <div class="pearl-petal" style="left:9px;top:0;width:10px;height:10px;background:oklch(88% 0.07 78);"></div>
+        <div class="pearl-petal" style="left:15px;top:7px;width:8px;height:10px;border-radius:40% 60% 30% 60%;background:oklch(68% 0.08 135);"></div>
+      </div>
+      <div class="pearl-chain">
+        <div class="pearl-bead" style="top:0;left:2px;width:7px;height:7px;animation-delay:0s;"></div>
+        <div class="pearl-bead" style="top:12px;left:9px;width:6px;height:6px;animation-delay:0.3s;"></div>
+        <div class="pearl-bead" style="top:23px;left:15px;width:5px;height:5px;animation-delay:0.6s;"></div>
+        <div class="pearl-bead" style="top:33px;left:20px;width:4px;height:4px;animation-delay:0.9s;"></div>
+      </div>
+    </div>
+    <div class="pearl right">
+      <div class="pearl-flower">
+        <div class="pearl-petal" style="right:0;top:4px;width:12px;height:12px;background:oklch(84% 0.09 15);"></div>
+        <div class="pearl-petal" style="right:9px;top:0;width:10px;height:10px;background:oklch(88% 0.07 78);"></div>
+        <div class="pearl-petal" style="right:15px;top:7px;width:8px;height:10px;border-radius:60% 40% 60% 30%;background:oklch(68% 0.08 135);"></div>
+      </div>
+      <div class="pearl-chain">
+        <div class="pearl-bead" style="top:0;right:2px;width:7px;height:7px;animation-delay:0.1s;"></div>
+        <div class="pearl-bead" style="top:12px;right:9px;width:6px;height:6px;animation-delay:0.4s;"></div>
+        <div class="pearl-bead" style="top:23px;right:15px;width:5px;height:5px;animation-delay:0.7s;"></div>
+        <div class="pearl-bead" style="top:33px;right:20px;width:4px;height:4px;animation-delay:1s;"></div>
+      </div>
+    </div>
+
+    <div class="hero-bottom-text">
+      <div class="hero-tagline">Slowly. Surely. Together.</div>
+      <div class="hero-date" data-i18n="hero.date"></div>
+      <a href="#rsvp" class="hero-cta" data-i18n="hero.cta"></a>
+    </div>
+
+    <div class="hero-toggles">
+      <button class="hero-toggle-btn curtain-toggle" id="curtain-toggle" aria-expanded="false"></button>
+      <button class="hero-toggle-btn playlist-toggle" id="playlist-toggle" aria-expanded="false" aria-controls="playlist-panel" data-i18n="hero.playlist_btn"></button>
+    </div>
+
+    <div class="playlist-panel" id="playlist-panel" role="region">
+      <div class="playlist-title" data-i18n="hero.playlist_title"></div>
+      <div id="playlist-list"></div>
+    </div>
+  </section>
+
+  <!-- ============ OUR STORY ============ -->
+  <section id="story" class="section">
+    <div class="section-header">
+      <p class="eyebrow" data-i18n="story.eyebrow"></p>
+      <h2 class="section-title" data-i18n="story.title"></h2>
+    </div>
+    <div class="story-photo">
+      <img src="assets/story-photo.jpg" alt="Kanokwan and Patipan"/>
+    </div>
+    <p class="story-p" data-i18n="story.p1"></p>
+    <p class="story-p" data-i18n="story.p2"></p>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section id="timeline" class="section">
+    <div class="section-header">
+      <p class="eyebrow" data-i18n="timeline.eyebrow_label"></p>
+      <h2 class="section-title" data-i18n="timeline.title"></h2>
+    </div>
+    <div class="timeline-list">
+      <div class="timeline-row">
+        <div class="timeline-time">06:00</div>
+        <div>
+          <div class="timeline-label" data-i18n="timeline.engagement"></div>
+          <div class="timeline-sub" data-i18n="timeline.family_only"></div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">08:00</div>
+        <div>
+          <div class="timeline-label" data-i18n="timeline.tea"></div>
+          <div class="timeline-sub" data-i18n="timeline.family_only"></div>
+        </div>
+      </div>
+      <div class="timeline-row last">
+        <div class="timeline-time">11:30</div>
+        <div>
+          <div class="timeline-label emphasis" data-i18n="timeline.welcome"></div>
+          <div class="timeline-sub plain" data-i18n="timeline.welcome_sub"></div>
+        </div>
+      </div>
+    </div>
+    <p class="timeline-note" data-i18n="timeline.note"></p>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section id="dresscode" class="section">
+    <p class="eyebrow" data-i18n="dress.eyebrow"></p>
+    <h2 class="section-title" style="margin-bottom:16px;" data-i18n="dress.title"></h2>
+    <p class="dress-desc" data-i18n="dress.desc"></p>
+    <div class="dress-swatches">
+      <div class="dress-swatch"><div class="chip ivory"></div><div class="label" data-i18n="dress.ivory"></div></div>
+      <div class="dress-swatch"><div class="chip sage"></div><div class="label" data-i18n="dress.sage"></div></div>
+      <div class="dress-swatch"><div class="chip champagne"></div><div class="label" data-i18n="dress.champagne"></div></div>
+      <div class="dress-swatch"><div class="chip green"></div><div class="label" data-i18n="dress.green"></div></div>
+    </div>
+    <div class="dress-note" data-i18n="dress.note"></div>
+  </section>
+
+  <!-- ============ WHAT WE'LL TAKE HOME ============ -->
+  <section id="experiences" class="section">
+    <div class="glasspanes" style="opacity:0.4;" aria-hidden="true"></div>
+    <div class="section-header">
+      <p class="eyebrow" data-i18n="exp.eyebrow"></p>
+      <h2 class="section-title" data-i18n="exp.title"></h2>
+    </div>
+    <div class="exp-frame">
+      <div class="exp-grid">
+        <div class="exp-card table">
+          <img src="assets/Long-Table.jpg" alt="The long table celebration"/>
+          <div class="exp-card-caption-block">
+            <div class="title" data-i18n="exp.table_title"></div>
+            <div class="desc" data-i18n="exp.table_desc"></div>
+          </div>
+        </div>
+        <div class="exp-card photobooth">
+          <img src="assets/photo-booth.jpg" alt="Photo booth instant film"/>
+          <div class="exp-caption rot1" data-i18n="exp.photo_booth_caption"></div>
+        </div>
+        <div class="exp-card cake">
+          <img src="assets/strawberry-shotcake-tower.jpg" alt="Strawberry shortcake tower"/>
+          <div class="exp-caption rotneg1" data-i18n="exp.cake_caption"></div>
+        </div>
+        <div class="exp-card perfume">
+          <div class="perfume-kicker" data-i18n="exp.perfume_kicker"></div>
+          <div class="perfume-bottle">
+            <div class="cap"></div><div class="neck"></div><div class="body"></div>
+          </div>
+          <div class="perfume-caption" data-i18n="exp.perfume_caption"></div>
+        </div>
+        <div class="exp-card flowers">
+          <img src="assets/flowers.png" alt="Flowers bouquet"/>
+          <div class="exp-caption rot1 shadow" data-i18n="exp.flowers_caption"></div>
+        </div>
+        <div class="exp-card perfumebar">
+          <img src="assets/perfume-bar.jpg" alt="Perfume bar experience"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section id="rsvp" class="section">
+    <div class="rsvp-wrap">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="rsvp.eyebrow"></p>
+        <p class="rsvp-bridge" id="rsvp-bridge" data-i18n="rsvp.bridge"></p>
+        <h2 class="section-title" style="margin-bottom:12px;" data-i18n="rsvp.title"></h2>
+        <p class="rsvp-desc" data-i18n="rsvp.desc"></p>
+      </div>
+
+      <div class="rsvp-confirm" id="rsvp-confirm" style="display:none;" role="status" aria-live="polite" tabindex="-1">
+        <div class="rsvp-confirm-mark">
+          <div class="dot a"></div><div class="dot b"></div>
+          <div class="disc"><img src="assets/Logo.png" alt="KP Logo"/></div>
+        </div>
+        <div class="rsvp-confirm-title" data-i18n="rsvp.confirmed_title"></div>
+        <p class="rsvp-confirm-summary" id="rsvp-summary"></p>
+        <div class="rsvp-confirm-actions">
+          <a href="#location" class="btn-outline" data-i18n="rsvp.view_map"></a>
+          <button class="btn-solid" id="rsvp-ics" data-i18n="rsvp.add_calendar"></button>
+        </div>
+        <button class="rsvp-edit-btn" id="rsvp-edit" data-i18n="rsvp.edit_response"></button>
+      </div>
+
+      <div class="rsvp-card" id="rsvp-form" aria-busy="false">
+        <div class="rsvp-meta-row">
+          <span class="k" data-i18n="rsvp.label_date"></span><span data-i18n="hero.date"></span>
+        </div>
+        <div class="rsvp-meta-row last">
+          <span class="k" data-i18n="rsvp.label_venue"></span><span>SOL House Bangkok</span>
+        </div>
+
+        <div class="field-label" id="rsvp-side-label" data-i18n="rsvp.field_side"></div>
+        <div class="attend-group" role="group" aria-labelledby="rsvp-side-label">
+          <button type="button" class="pill-btn is-active" id="rsvp-side-groom" aria-pressed="true" data-i18n="rsvp.side_groom"></button>
+          <button type="button" class="pill-btn" id="rsvp-side-bride" aria-pressed="false" data-i18n="rsvp.side_bride"></button>
+        </div>
+
+        <label class="field-label" for="rsvp-first-name" data-i18n="rsvp.field_first_name"></label>
+        <input class="field-input" id="rsvp-first-name" name="firstName" autocomplete="given-name"/>
+
+        <label class="field-label" for="rsvp-last-name" data-i18n="rsvp.field_last_name"></label>
+        <input class="field-input" id="rsvp-last-name" name="lastName" autocomplete="family-name"/>
+
+        <div class="field-label" id="rsvp-attending-label" data-i18n="rsvp.field_attending"></div>
+        <div class="attend-group" role="group" aria-labelledby="rsvp-attending-label">
+          <button class="pill-btn is-active" id="rsvp-yes" aria-pressed="true" data-i18n="rsvp.yes"></button>
+          <button class="pill-btn" id="rsvp-no" aria-pressed="false" data-i18n="rsvp.no"></button>
+        </div>
+
+        <div id="rsvp-attending-fields">
+          <div class="field-label" id="rsvp-guests-label" data-i18n="rsvp.field_guests"></div>
+          <div class="guest-stepper" role="group" aria-labelledby="rsvp-guests-label">
+            <button class="stepper-btn" id="rsvp-dec" aria-label="Decrease guest count">&minus;</button>
+            <div class="guest-count" id="rsvp-guest-count" aria-live="polite">1</div>
+            <button class="stepper-btn" id="rsvp-inc" aria-label="Increase guest count">+</button>
+          </div>
+
+          <div class="session-default" data-i18n="rsvp.session_default"></div>
+          <div class="session-options" id="rsvp-session-options">
+            <button class="session-btn is-active" id="rsvp-session-lunch" data-i18n="rsvp.session_lunch"></button>
+            <button class="session-btn" id="rsvp-session-both" data-i18n="rsvp.session_both"></button>
+          </div>
+          <button class="session-reveal-btn" id="rsvp-session-reveal" data-i18n="rsvp.session_reveal"></button>
+
+          <div class="dietary-note" data-i18n="rsvp.dietary_note"></div>
+          <label class="field-label" for="rsvp-dietary" data-i18n="rsvp.field_dietary"></label>
+          <input class="field-input" id="rsvp-dietary" name="dietary"/>
+
+          <label class="field-label" for="rsvp-contact" data-i18n="rsvp.field_contact"></label>
+          <input class="field-input" id="rsvp-contact" name="tel" type="tel" autocomplete="tel"/>
+
+          <label class="field-label" for="rsvp-message" data-i18n="rsvp.field_message"></label>
+          <textarea class="field-input" id="rsvp-message" name="message" rows="3"></textarea>
+        </div>
+
+        <button type="button" class="rsvp-submit" id="rsvp-submit" data-i18n="rsvp.submit"></button>
+        <div class="rsvp-error" id="rsvp-error" role="alert" aria-live="polite" tabindex="-1" style="display:none;"></div>
+        <div class="rsvp-deadline" data-i18n="rsvp.deadline_note"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOCATION ============ -->
+  <section id="location" class="section">
+    <div class="section-header">
+      <p class="eyebrow" data-i18n="loc.eyebrow"></p>
+      <h2 class="section-title">SOL House Bangkok</h2>
+    </div>
+    <p class="loc-intro">We looked at a lot of places. This one felt right in size for 160 people, with a spiral staircase we couldn't stop thinking about, and a garden view without being fully outdoors.</p>
+    <div class="loc-photo"><img src="assets/solhouse-1.jpg" alt="SOL House venue"/></div>
+    <div class="loc-map">
+      <iframe title="Map to SOL House Bangkok" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.558938478891!2d100.5783752!3d13.7990875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864db4c2d3c2d3c3%3A0x0!2sSol%20House%20Bangkok!5e0!3m2!1sen!2sth!4v1702500000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <div class="loc-maplink"><a href="https://maps.app.goo.gl/NcbzjZsWfdtYoKhm8" target="_blank" rel="noopener noreferrer">View on Google Maps →</a></div>
+    <div class="loc-address-block">
+      <p>
+        <strong>SOL House Bangkok</strong><br>
+        Soi Ladprao 38, Samsen Nok, Huai Khwang<br>
+        Bangkok 10310, Thailand<br>
+        <a href="tel:+66991623979">📞 +66 991 623 979</a>
+      </p>
+    </div>
+    <div class="loc-address" data-i18n="loc.address"></div>
+    <div class="loc-parking" data-i18n="loc.parking"></div>
+    <div class="loc-actions"><a href="#" data-i18n="loc.cta_directions"></a></div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="section">
+    <div class="section-header">
+      <p class="eyebrow" data-i18n="faq.eyebrow_label"></p>
+      <h2 class="section-title" data-i18n="faq.title"></h2>
+    </div>
+    <div id="faq-list"></div>
+  </section>
+
+  <!-- ============ GUESTBOOK ============ -->
+  <section id="guestbook" class="section">
+    <p class="eyebrow" data-i18n="guestbook.eyebrow"></p>
+    <h2 class="section-title" style="margin-bottom:12px;" data-i18n="guestbook.title"></h2>
+    <p class="guestbook-desc" data-i18n="guestbook.desc"></p>
+    <a href="#" class="guestbook-btn" data-i18n="guestbook.button"></a>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-mark">
+      <div class="dot a"></div><div class="dot b"></div>
+      <div class="disc"><img src="assets/Logo.png" alt="KP Logo"></div>
+    </div>
+    <p class="footer-message" data-i18n="footer.message"></p>
+    <div class="footer-names">Kanokwan &amp; Patipan</div>
+    <div class="footer-date">12.12.2026 &middot; SOL House Bangkok</div>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
