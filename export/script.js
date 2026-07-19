@@ -333,8 +333,10 @@
     el.setAttribute('data-reveal', '');
   });
 
-  document.getElementById('lang-en').addEventListener('click', function () { state.lang = 'en'; applyI18n(); });
-  document.getElementById('lang-th').addEventListener('click', function () { state.lang = 'th'; applyI18n(); });
+  var langEnBtn = document.getElementById('lang-en');
+  var langThBtn = document.getElementById('lang-th');
+  if (langEnBtn) langEnBtn.addEventListener('click', function () { state.lang = 'en'; applyI18n(); });
+  if (langThBtn) langThBtn.addEventListener('click', function () { state.lang = 'th'; applyI18n(); });
 
   document.getElementById('curtain-toggle').addEventListener('click', function () { setCurtainOpen(!state.curtainOpen); });
 
