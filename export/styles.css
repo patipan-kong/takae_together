@@ -201,6 +201,7 @@ html[lang="th"] .story-media--float { float: none; width: 46%; margin: 0 0 24px 
 
 /* ---------- timeline ---------- */
 #timeline { padding: 70px 24px; max-width: 480px; margin: 0 auto; }
+.timeline-venue-note { margin: 14px 0 0; font-size: 11px; letter-spacing: 1px; line-height: 1.5; color: oklch(48% 0.02 95); text-align: center; }
 .timeline-list { display: flex; flex-direction: column; margin-top: 8px; }
 .timeline-row { display: grid; grid-template-columns: 84px 1fr; gap: 18px; align-items: baseline; padding: 24px 0; border-top: 1px solid oklch(85% 0.02 90); }
 .timeline-row.last { border-bottom: 1px solid oklch(85% 0.02 90); }
@@ -320,11 +321,6 @@ html[lang="th"] .story-media--float { float: none; width: 46%; margin: 0 0 24px 
 .faq-btn[aria-expanded="true"] .icon { transform: rotate(45deg); }
 .faq-panel { padding: 0 4px 18px; font-size: 13.5px; line-height: 1.7; color: oklch(42% 0.02 95); display: none; }
 .faq-panel.is-open { display: block; }
-
-/* ---------- guestbook ---------- */
-#guestbook { padding: 70px 24px 90px; max-width: 460px; margin: 0 auto; text-align: center; }
-.guestbook-desc { font-size: 13.5px; color: oklch(45% 0.02 95); margin-bottom: 22px; }
-.guestbook-btn { display: inline-block; padding: 13px 28px; background: oklch(56% 0.055 130); color: oklch(99% 0.006 90); border-radius: 999px; font-size: 12.5px; letter-spacing: 1px; }
 
 /* ---------- footer ---------- */
 footer { padding: 88px 24px 64px; text-align: center; background: oklch(92% 0.02 85); }

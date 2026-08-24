@@ -11,7 +11,7 @@
         p1: "We started as two people who kept talking longer than we meant to. Patipan is seven years older, and at some point that started to matter—he began taking care of himself so he could be around longer. Kanokwan joined him, and together they built healthier routines. On November 3rd, at Labraris Hotel in Khao Yai, Patipan arrived carrying a bouquet. Kanokwan smiled the moment she saw it—she already knew what was coming.",
         p2: "They continue to grow side by side, making space for each other's dreams, celebrating small moments, and finding joy in everyday life. Patipan says Kanokwan is like a Disney princess — kind to everyone, impossible not to love once you've seen her smile. Kanokwan says he's naturally funny, and being around him has made her calmer."
       },
-      timeline: { eyebrow_label: "Arrival", title: "When to Arrive", family_only: "Private Family Ceremony", engagement: "Chinese Engagement Ceremony", tea: "Tea Ceremony", welcome: "Guest Welcome", welcome_sub: "Reception begins", note: "We'll welcome everyone from 11:30. Lunch, conversation and celebration will follow naturally from there." },
+      timeline: { eyebrow_label: "Arrival", title: "When to Arrive", venue_note: "All wedding events will take place on the 3rd floor.", family_only: "Private Family Ceremony", engagement: "Chinese Engagement Ceremony", tea: "Tea Ceremony", welcome: "Guest Welcome", welcome_sub: "Reception begins", note: "We'll welcome everyone from 11:30. Lunch, conversation and celebration will follow naturally from there." },
       dress: { eyebrow: "Dress Code", title: "All Colours Are Welcome", desc: "Come dressed for a bright glasshouse lunch. Light fabrics and comfortable shoes are encouraged.", ivory: "Ivory", sage: "Sage", champagne: "Champagne", green: "Deep Sage", note: "Kindly reserve white & ivory tones for the bride" },
       exp: { eyebrow: "not activities — the things we'll remember", title: "What We'll Take Home", table_title: "one long table, one long conversation", table_desc: "No round tables — one long conversation instead.", photo_booth_caption: "Say whatever you want. We'll watch it back later.", cake_caption: "Strawberries and icing, in place of a formal cake-cutting.", perfume_kicker: "blend your own", perfume_caption: "Three scents, mixed however you like. Reed diffusers available for guests who'd rather skip the perfume.", flowers_caption: "the flower someone presses into a book" },
       rsvp: {
@@ -30,7 +30,6 @@
       },
       loc: { eyebrow: "Location", address: "Address to be confirmed", parking: "On-site parking available — please follow signage from the entrance.", cta_directions: "Get Directions" },
       faq: { eyebrow_label: "Notes", title: "Good to Know" },
-      guestbook: { eyebrow: "Guestbook", title: "Leave Us a Message", desc: "A quick note, a memory, a wish for us — we'll read every one.", button: "Leave Us a Message" },
       footer: { message: "Thank you for celebrating with us.\nWe'll see you on December 12.\n\n#TaKaeTogether" }
     },
     th: {
@@ -40,7 +39,7 @@
         p1: "จากออเดอร์กาแฟธรรมดา เสียงหัวเราะที่แบ่งปัน และมิตรภาพที่ค่อยๆ เติบโต กลายเป็นช่วงเวลาที่ดีที่สุดของทุกวัน",
         p2: "วันนี้ท่ามกลางแสงอบอุ่นจากกระจกและคนที่เรารัก เราพร้อมเริ่มต้นบทใหม่ไปด้วยกัน"
       },
-      timeline: { eyebrow_label: "การมาถึง", title: "เวลามาถึง", family_only: "พิธีส่วนตัวของครอบครัว", engagement: "พิธีสู่ขอแบบจีน", tea: "พิธีรดน้ำชา", welcome: "ต้อนรับแขก", welcome_sub: "เริ่มงานเลี้ยงต้อนรับ", note: "เราจะพร้อมต้อนรับทุกคนตั้งแต่ 11:30 น. เป็นต้นไป มื้อกลางวัน บทสนทนา และการเฉลิมฉลองจะค่อยๆ เกิดขึ้นเองตามธรรมชาติ" },
+      timeline: { eyebrow_label: "การมาถึง", title: "เวลามาถึง", venue_note: "งานแต่งงานทั้งหมดจัดขึ้นที่ชั้น 3", family_only: "พิธีส่วนตัวของครอบครัว", engagement: "พิธีสู่ขอแบบจีน", tea: "พิธีรดน้ำชา", welcome: "ต้อนรับแขก", welcome_sub: "เริ่มงานเลี้ยงต้อนรับ", note: "เราจะพร้อมต้อนรับทุกคนตั้งแต่ 11:30 น. เป็นต้นไป มื้อกลางวัน บทสนทนา และการเฉลิมฉลองจะค่อยๆ เกิดขึ้นเองตามธรรมชาติ" },
       dress: { eyebrow: "การแต่งกาย", title: "อ่อนหวาน เรียบง่าย สบายตัว", desc: "แต่งกายสบายๆ โทนสีอ่อน เหมาะกับมื้อกลางวันในเรือนกระจกที่สว่างไสว ห้องจะแวววาวมากพอแล้ว ให้ชุดของคุณดูนุ่มนวล", ivory: "งาช้าง", sage: "เขียวเซจ", champagne: "แชมเปญ", green: "เขียวเข้ม", note: "ขอสงวนโทนสีขาวและงาช้างไว้สำหรับเจ้าสาว" },
       exp: { eyebrow: "ไม่ใช่กิจกรรม — แต่เป็นสิ่งที่เราจะจดจำ", title: "สิ่งที่เราจะพกกลับไป", table_title: "โต๊ะยาวหนึ่งโต๊ะ บทสนทนาที่ไม่รู้จบ", table_desc: "ครอบครัวและเพื่อนฝูง เคียงบ่าเคียงไหล่ — คำอวยพรจากพ่อแม่ เรื่องเล่าเก่าๆ ที่ถูกเล่าซ้ำ จานอาหารที่ส่งต่อกันด้วยมือ นี่คือหัวใจของวันนี้", photo_booth_caption: "ไม่ใช่กล้อง — แต่คือเสียงหัวเราะที่คุณจะเก็บไว้", cake_caption: "ไม่ใช่เค้ก — แต่คือความสุขที่ทุกคนมารวมตัวกัน", perfume_kicker: "ผสมน้ำหอมของคุณเอง", perfume_caption: "ไม่ใช่ของชำร่วย แต่เป็นกลิ่นที่จะกลายเป็นความทรงจำ อีกหลายปีข้างหน้า แค่ได้กลิ่นก็เหมือนกลับมาที่โต๊ะของเรา", flowers_caption: "ดอกไม้ที่ใครสักคนจะกดแห้งเก็บไว้ในหนังสือ" },
       rsvp: {
@@ -59,7 +58,6 @@
       },
       loc: { eyebrow: "สถานที่", address: "ที่อยู่จะแจ้งให้ทราบเร็วๆ นี้", parking: "มีที่จอดรถภายในสถานที่ — กรุณาปฏิบัติตามป้ายบอกทางจากทางเข้า", cta_directions: "นำทาง" },
       faq: { eyebrow_label: "หมายเหตุ", title: "สิ่งที่ควรรู้" },
-      guestbook: { eyebrow: "สมุดเยี่ยม", title: "ฝากข้อความถึงเรา", desc: "ข้อความสั้นๆ ความทรงจำ หรือคำอวยพร — เราจะอ่านทุกข้อความ", button: "ฝากข้อความถึงเรา" },
       footer: { message: "ขอบคุณที่มาร่วมฉลองกับเรา\nพบกัน 12 ธันวาคมนี้ค่ะ" }
     }
   };
@@ -329,7 +327,7 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
-  document.querySelectorAll('.section, #story, #timeline, #dresscode, #experiences, #rsvp, #location, #faq, #guestbook').forEach(function (el) {
+  document.querySelectorAll('.section, #story, #timeline, #dresscode, #experiences, #rsvp, #location, #faq').forEach(function (el) {
     el.setAttribute('data-reveal', '');
   });
 
