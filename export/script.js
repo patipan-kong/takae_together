@@ -6,6 +6,7 @@
   var CONTENT = {
     en: {
       hero: { date: "12 December 2026", prompt: "curious what's behind the curtain?", cta: "RSVP", toggle_open: "step inside", toggle_close: "close curtain", playlist_btn: "our playlist", playlist_title: "songs for the day" },
+      countdown: { eyebrow: "Counting down", title: "Until our day", days: "Days", hours: "Hours", minutes: "Minutes", seconds: "Seconds", arrived: "Today is our day." },
       story: {
         eyebrow: "Our Story", title: "How it began",
         p1: "Being together has taught us how simple happiness can be. Over time, we have naturally become each other’s home, comfort, and safest place. Loving each other makes us want to grow, take better care of ourselves, and become better versions of ourselves every day. Through the difficult days and the happy ones, we’ve always been there for each other.",
@@ -34,6 +35,7 @@
     },
     th: {
       hero: { date: "12 ธันวาคม 2569", prompt: "อยากรู้ไหมว่าหลังม่านมีอะไร?", cta: "ตอบรับคำเชิญ", toggle_open: "ก้าวเข้ามา", toggle_close: "ปิดม่าน", playlist_btn: "เพลย์ลิสต์ของเรา", playlist_title: "เพลงประจำวันนี้" },
+      countdown: { eyebrow: "นับถอยหลัง", title: "ถึงวันของเรา", days: "วัน", hours: "ชั่วโมง", minutes: "นาที", seconds: "วินาที", arrived: "วันนี้คือวันของเรา" },
       story: {
         eyebrow: "เรื่องราวของเรา", title: "จุดเริ่มต้น",
         p1: "จากออเดอร์กาแฟธรรมดา เสียงหัวเราะที่แบ่งปัน และมิตรภาพที่ค่อยๆ เติบโต กลายเป็นช่วงเวลาที่ดีที่สุดของทุกวัน",
@@ -106,6 +108,35 @@
     renderPlaylist();
     renderRsvpSummary();
     updateCurtainToggleLabel();
+  }
+
+  var WEDDING_DATE = new Date('2026-12-12T00:00:00+07:00');
+
+  function updateCountdown() {
+    var grid = document.getElementById('countdown-grid');
+    var arrived = document.getElementById('countdown-arrived');
+    if (!grid || !arrived) return;
+    var remaining = WEDDING_DATE.getTime() - Date.now();
+    if (remaining <= 0) {
+      grid.hidden = true;
+      arrived.hidden = false;
+      return;
+    }
+    grid.hidden = false;
+    arrived.hidden = true;
+    var days = Math.floor(remaining / 86400000);
+    var hours = Math.floor((remaining % 86400000) / 3600000);
+    var minutes = Math.floor((remaining % 3600000) / 60000);
+    var seconds = Math.floor((remaining % 60000) / 1000);
+    document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
+    document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('countdown-minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('countdown-seconds').textContent = String(seconds).padStart(2, '0');
+  }
+
+  function initCountdown() {
+    updateCountdown();
+    window.setInterval(updateCountdown, 1000);
   }
 
   function renderFaq() {
@@ -327,7 +358,7 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
-  document.querySelectorAll('.section, #story, #timeline, #dresscode, #experiences, #rsvp, #location, #faq').forEach(function (el) {
+  document.querySelectorAll('.section, #countdown, #story, #timeline, #dresscode, #experiences, #rsvp, #location, #faq').forEach(function (el) {
     el.setAttribute('data-reveal', '');
   });
 
@@ -377,6 +408,7 @@
 
   applyI18n();
   renderRsvpState();
+  initCountdown();
   initRevealObserver();
   setTimeout(function () { setCurtainOpen(true); }, 1600);
 })();
