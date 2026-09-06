@@ -337,3 +337,22 @@ footer { padding: 88px 24px 64px; text-align: center; background: oklch(92% 0.02
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- countdown ---------- */
+.countdown-section { position: relative; padding: 72px 24px 66px; text-align: center; background: oklch(97.5% 0.012 82); border-bottom: 1px solid oklch(88% 0.018 85); }
+.countdown-inner { width: min(760px, 100%); margin: 0 auto; }
+.countdown-eyebrow { margin: 0 0 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: oklch(50% 0.045 125); }
+.countdown-title { margin: 0 0 34px; font-family: "Cormorant Garamond", serif; font-size: clamp(34px, 5vw, 52px); font-weight: 500; line-height: 1; color: oklch(31% 0.025 95); }
+.countdown-grid { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; align-items: center; gap: clamp(6px, 2vw, 18px); }
+.countdown-unit { min-width: 0; }
+.countdown-number { display: block; font-family: "Cormorant Garamond", serif; font-size: clamp(38px, 8vw, 68px); font-weight: 500; line-height: 0.95; font-variant-numeric: tabular-nums; color: oklch(39% 0.055 125); }
+.countdown-label { display: block; margin-top: 10px; font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(50% 0.025 95); }
+.countdown-separator { align-self: start; padding-top: clamp(7px, 1vw, 12px); font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 5vw, 42px); color: oklch(68% 0.035 90); }
+.countdown-date { margin: 28px 0 0; font-size: 12px; letter-spacing: 0.12em; color: oklch(47% 0.025 95); }
+.countdown-arrived { margin: 8px 0 0; font-family: "Cormorant Garamond", serif; font-size: clamp(38px, 7vw, 58px); font-style: italic; color: oklch(39% 0.055 125); }
+@media (max-width: 560px) {
+  .countdown-section { padding: 56px 18px 52px; }
+  .countdown-title { margin-bottom: 28px; }
+  .countdown-grid { gap: 4px; }
+  .countdown-label { margin-top: 8px; font-size: 8px; letter-spacing: 0.1em; }
+}
