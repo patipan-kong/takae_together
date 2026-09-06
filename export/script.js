@@ -8,8 +8,8 @@
       hero: { date: "12 December 2026", prompt: "curious what's behind the curtain?", cta: "RSVP", toggle_open: "step inside", toggle_close: "close curtain", playlist_btn: "our playlist", playlist_title: "songs for the day" },
       story: {
         eyebrow: "Our Story", title: "How it began",
-        p1: "On November 3rd, at Labraris Hotel in Khao Yai, Patipan arrived carrying a bouquet. Kanokwan smiled the moment she saw it—she already knew what was coming.",
-        p2: ""
+        p1: "Being together has taught us how simple happiness can be. Over time, we have naturally become each other’s home, comfort, and safest place. Loving each other makes us want to grow, take better care of ourselves, and become better versions of ourselves every day. Through the difficult days and the happy ones, we’ve always been there for each other.",
+        p2: "November 3rd will always be a special day for us — the day we chose our next chapter together. And now, as we look forward to spending the rest of our lives side by side, we couldn’t be happier to see where this journey takes us next."
       },
       timeline: { eyebrow_label: "Arrival", title: "When to Arrive", venue_note: "All wedding events will take place on the 3rd floor.", family_only: "Private Family Ceremony", engagement: "Chinese Engagement Ceremony", tea: "Tea Ceremony", welcome: "Guest Welcome", welcome_sub: "Reception begins", note: "We'll welcome everyone from 11:30. Lunch, conversation and celebration will follow naturally from there." },
       dress: { eyebrow: "Dress Code", title: "All Colours Are Welcome", desc: "Come dressed for a bright glasshouse lunch. Light fabrics and comfortable shoes are encouraged.", ivory: "Ivory", sage: "Sage", champagne: "Champagne", green: "Deep Sage", note: "Kindly reserve white & ivory tones for the bride" },
