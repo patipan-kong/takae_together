@@ -8,8 +8,8 @@
       hero: { date: "12 December 2026", prompt: "curious what's behind the curtain?", cta: "RSVP", toggle_open: "step inside", toggle_close: "close curtain", playlist_btn: "our playlist", playlist_title: "songs for the day" },
       story: {
         eyebrow: "Our Story", title: "How it began",
-        p1: "We started with simple conversations that slowly brought us closer. Patipan is seven years older, and at some point that started to matter—he began taking care of himself so he could be around longer. Kanokwan joined him, and together they built healthier routines. On November 3rd, at Labraris Hotel in Khao Yai, Patipan arrived carrying a bouquet. Kanokwan smiled the moment she saw it—she already knew what was coming.",
-        p2: "They continue to grow side by side, making space for each other's dreams, celebrating small moments, and finding joy in everyday life. Patipan says Kanokwan is like a Disney princess — kind to everyone, impossible not to love once you've seen her smile. Kanokwan says he's naturally funny, and being around him has made her calmer."
+        p1: "On November 3rd, at Labraris Hotel in Khao Yai, Patipan arrived carrying a bouquet. Kanokwan smiled the moment she saw it—she already knew what was coming.",
+        p2: ""
       },
       timeline: { eyebrow_label: "Arrival", title: "When to Arrive", venue_note: "All wedding events will take place on the 3rd floor.", family_only: "Private Family Ceremony", engagement: "Chinese Engagement Ceremony", tea: "Tea Ceremony", welcome: "Guest Welcome", welcome_sub: "Reception begins", note: "We'll welcome everyone from 11:30. Lunch, conversation and celebration will follow naturally from there." },
       dress: { eyebrow: "Dress Code", title: "All Colours Are Welcome", desc: "Come dressed for a bright glasshouse lunch. Light fabrics and comfortable shoes are encouraged.", ivory: "Ivory", sage: "Sage", champagne: "Champagne", green: "Deep Sage", note: "Kindly reserve white & ivory tones for the bride" },
