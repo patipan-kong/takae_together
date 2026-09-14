@@ -358,9 +358,37 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
+  function initStoryVideoMotion() {
+    var video = document.querySelector('.story-video');
+    if (!video || typeof window.matchMedia !== 'function') return;
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function syncVideo() {
+      if (reduceMotion.matches) {
+        video.pause();
+        video.removeAttribute('autoplay');
+        if (video.readyState >= 1) video.currentTime = 0;
+        return;
+      }
+
+      video.setAttribute('autoplay', '');
+      var playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(function () {});
+    }
+
+    syncVideo();
+    if (typeof reduceMotion.addEventListener === 'function') {
+      reduceMotion.addEventListener('change', syncVideo);
+    } else if (typeof reduceMotion.addListener === 'function') {
+      reduceMotion.addListener(syncVideo);
+    }
+  }
+
   document.querySelectorAll('.section, #countdown, #story, #timeline, #dresscode, #experiences, #rsvp, #location, #faq').forEach(function (el) {
     el.setAttribute('data-reveal', '');
   });
+
+  initStoryVideoMotion();
 
   var langEnBtn = document.getElementById('lang-en');
   var langThBtn = document.getElementById('lang-th');
