@@ -386,20 +386,64 @@
 
   function initGalleryVideoMotion() {
     var video = document.querySelector('.gallery-feature video');
-    if (!video || typeof window.matchMedia !== 'function') return;
+    if (!video || typeof window.matchMedia !== 'function' || typeof IntersectionObserver !== 'function') return;
 
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var observer = null;
+    var hasTriggered = false;
+
+    function resetVideo() {
+      video.pause();
+      try {
+        video.currentTime = 0;
+      } catch (error) {}
+    }
+
+    function stopObserving() {
+      if (!observer) return;
+      observer.disconnect();
+      observer = null;
+    }
+
+    function startObserving() {
+      if (observer || hasTriggered || reduceMotion.matches) return;
+
+      observer = new IntersectionObserver(function (entries) {
+        var entry = entries[0];
+        if (!entry || !entry.isIntersecting || entry.intersectionRatio < 0.5 || reduceMotion.matches || hasTriggered) return;
+
+        hasTriggered = true;
+        stopObserving();
+        video.muted = true;
+        video.defaultMuted = true;
+        try {
+          video.currentTime = 0;
+        } catch (error) {}
+
+        var playPromise;
+        try {
+          playPromise = video.play();
+        } catch (error) {
+          resetVideo();
+          return;
+        }
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(function () {
+            resetVideo();
+          });
+        }
+      }, { threshold: 0.5 });
+      observer.observe(video);
+    }
+
     function syncVideo() {
       if (reduceMotion.matches) {
-        video.pause();
-        video.removeAttribute('autoplay');
-        if (video.readyState >= 1) video.currentTime = 0;
+        stopObserving();
+        resetVideo();
         return;
       }
 
-      video.setAttribute('autoplay', '');
-      var playPromise = video.play();
-      if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(function () {});
+      startObserving();
     }
 
     syncVideo();
