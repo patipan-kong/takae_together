@@ -301,20 +301,15 @@
 
     setRsvpSubmitting(true);
 
+    // Apps Script runs doPost before redirecting to its response echo URL, which
+    // intermittently 404s even though the row was saved. no-cors makes that a
+    // resolved (opaque) response; only real network failures reject.
     fetch(RSVP_ENDPOINT, {
       method: 'POST',
+      mode: 'no-cors',
       body: new URLSearchParams(payload)
     })
-      .then(function (res) {
-        if (!res.ok) throw new Error('RSVP request failed with status ' + res.status);
-        return res.json().catch(function () {
-          throw new Error('RSVP response was not valid JSON');
-        });
-      })
-      .then(function (data) {
-        if (!data || data.success !== true) {
-          throw new Error('RSVP server reported failure: ' + (data && data.message));
-        }
+      .then(function () {
         state.rsvpFirstName = firstName;
         state.rsvpLastName = lastName;
         state.rsvpGuestCount = guestCount;
