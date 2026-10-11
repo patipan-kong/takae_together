@@ -302,7 +302,8 @@ img { max-width: 100%; display: block; }
 .loc-photo { width: 100%; aspect-ratio: 4/3; border-radius: 6px; margin-bottom: 20px; overflow: hidden; }
 .loc-photo img { width: 100%; height: 100%; object-fit: cover; }
 .loc-map { width: 100%; aspect-ratio: 16/10; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
-.loc-map iframe { width: 100%; height: 100%; border: none; }
+.loc-map-card { position: relative; display: block; width: 100%; height: 100%; }
+.loc-map-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .loc-maplink { margin-bottom: 8px; }
 .loc-maplink a { font-size: 13px; color: oklch(48% 0.06 118); font-weight: 500; }
 .loc-address-block { margin-bottom: 18px; }
