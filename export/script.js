@@ -328,18 +328,9 @@
   }
 
   function downloadIcs() {
-    var ics = [
-      'BEGIN:VCALENDAR', 'VERSION:2.0', 'BEGIN:VEVENT',
-      'DTSTART:20261212T113000', 'DTEND:20261212T143000',
-      "SUMMARY:Kanokwan & Patipan's Wedding", 'LOCATION:SOL House Bangkok',
-      'DESCRIPTION:Reception lunch at one long table.', 'END:VEVENT', 'END:VCALENDAR'
-    ].join('\r\n');
-    var blob = new Blob([ics], { type: 'text/calendar' });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    a.href = url; a.download = 'kanokwan-patipan-wedding.ics';
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    // Serve a real .ics file rather than a transient blob URL, which is
+    // unreliable in some iOS browsers and in-app webviews.
+    window.location.href = 'kanokwan-patipan-wedding.ics';
   }
 
   function initRevealObserver() {
