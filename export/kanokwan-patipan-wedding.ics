@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kanokwan and Patipan//Wedding Invitation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kanokwan-patipan-wedding-20261212@takae-together.vercel.app
+DTSTAMP:20261018T000000Z
+DTSTART;TZID=Asia/Bangkok:20261212T113000
+DTEND;TZID=Asia/Bangkok:20261212T140000
+SUMMARY:Kanokwan & Patipan's Wedding
+LOCATION:SOL House Bangkok\, Soi Ladprao 38\, Bangkok
+DESCRIPTION:Wedding lunch reception at SOL House Bangkok.
+END:VEVENT
+END:VCALENDAR
