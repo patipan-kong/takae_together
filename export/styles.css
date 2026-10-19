@@ -234,7 +234,7 @@ img { max-width: 100%; display: block; }
 .exp-card-caption-block .desc { font-size: 11.5px; color: oklch(94% 0.015 90); max-width: 420px; }
 .exp-card.photobooth { grid-column: 1 / span 3; grid-row: 10 / span 4; background: oklch(99% 0.006 90); border-radius: 2px; box-shadow: 0 10px 22px oklch(25% 0.025 88 / 0.16); transform: rotate(-3deg); }
 .exp-card.cake { grid-column: 1 / span 3; grid-row: 5 / span 5; background: oklch(99% 0.006 90); border-radius: 2px; box-shadow: 0 10px 22px oklch(25% 0.025 88 / 0.16); transform: rotate(2deg); }
-.exp-card.dessert { grid-column: 4 / span 3; grid-row: 5 / span 5; background: oklch(99% 0.006 90); border-radius: 2px; box-shadow: 0 10px 22px oklch(25% 0.025 88 / 0.16); transform: rotate(-2.5deg); }
+.exp-card.dessert { grid-column: 1 / span 6; grid-row: 5 / span 5; background: oklch(99% 0.006 90); border-radius: 2px; box-shadow: 0 10px 22px oklch(25% 0.025 88 / 0.16); transform: rotate(-1deg); }
 .exp-card.flowers { grid-column: 4 / span 3; grid-row: 10 / span 4; background: oklch(99% 0.006 90); border-radius: 2px; box-shadow: 0 10px 22px oklch(25% 0.025 88 / 0.15); transform: rotate(-2deg); }
 .exp-card.perfumebar { grid-column: 4 / span 3; grid-row: 14 / span 6; background: oklch(99% 0.006 90); border-radius: 2px; box-shadow: 0 10px 22px oklch(25% 0.025 88 / 0.15); transform: rotate(2.5deg); }
 .exp-caption { position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; font-weight: 500; color: oklch(98% 0.012 88); text-shadow: 0 1px 2px oklch(0% 0 0 / 0.75), 0 2px 6px oklch(0% 0 0 / 0.35); }
