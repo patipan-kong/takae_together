@@ -1,8 +1,8 @@
 # Ratchaburi editorial gallery
 
-The `#gallery` section in `export/index.html` shows 17 photos from
-`export/assets/gallery/ratchaburi-e-card/` in two chapters ("By the Lake",
-"In the Meadow"), with a click-to-enlarge lightbox. The video opener is unchanged.
+The `#gallery` section in `export/index.html` shows 20 photos (16 from
+`export/assets/gallery/ratchaburi-e-card/` / 4 from `export/assets/gallery/legacy-web/`) in three chapters ("By the Lake",
+"In the Meadow", "In the Studio"), with a click-to-enlarge lightbox. The video opener is unchanged.
 
 - Markup: `<section id="gallery">` in `export/index.html`; seven named `.rg-spread--*`
   compositions contain the `.rg-item` photographs.
@@ -18,7 +18,8 @@ The `#gallery` section in `export/index.html` shows 17 photos from
 The DOM and lightbox order is:
 
 - By the Lake: `75, 17, 94, 48, 20, 36, 3, 107, 148`.
-- In the Meadow: `215, 196, 204, 193, 170, 262, 224, 279`.
+- In the Meadow: `196, 204, 193, 170, 262, 224, 279`.
+- In the Studio (legacy indoor set, `data-rg-web` points the lightbox at `legacy-web/`): `DSC05603, DSC05675, DSC05711, DSC05730`.
 
 On mobile the supporting `3`/`148` pair appears above the large `107` portrait;
 keyboard and lightbox navigation retain DOM order. Photo IDs are not printed in

@@ -616,6 +616,12 @@ footer { padding: 88px 24px 64px; text-align: center; background: oklch(92% 0.02
 .rg-spread--meadow-finale .rg-item--landscape { grid-column: 1 / span 8; }
 .rg-spread--meadow-finale .rg-item--trail { grid-column: 10 / -1; margin-top: 48px; }
 
+/* Studio: the indoor portraits as two quiet pairs; the red-backdrop pair stays adjacent. */
+.rg-spread--studio-opening .rg-item--lead { grid-column: 1 / span 5; }
+.rg-spread--studio-opening .rg-item--companion { grid-column: 7 / span 5; margin-top: clamp(64px, 9vw, 128px); }
+.rg-spread--studio-red .rg-item--lead { grid-column: 2 / span 5; }
+.rg-spread--studio-red .rg-item--companion { grid-column: 7 / span 5; margin-top: clamp(48px, 7vw, 96px); }
+
 @media (min-width: 701px) and (max-width: 1024px) {
   .rg-spread { column-gap: 16px; }
   .rg-spread--lake-opening { column-gap: 18%; padding-right: 8%; }
@@ -653,6 +659,10 @@ footer { padding: 88px 24px 64px; text-align: center; background: oklch(92% 0.02
   .rg-spread--meadow-finale { row-gap: 56px; }
   .rg-spread--meadow-finale .rg-item--landscape { grid-column: 1 / -1; }
   .rg-spread--meadow-finale .rg-item--trail { grid-column: 1 / -1; width: 67%; max-width: 300px; margin: 0; justify-self: end; }
+  .rg-spread--studio-opening .rg-item--lead,
+  .rg-spread--studio-red .rg-item--lead { grid-column: 1; }
+  .rg-spread--studio-opening .rg-item--companion,
+  .rg-spread--studio-red .rg-item--companion { grid-column: 2; margin-top: 48px; }
 }
 
 

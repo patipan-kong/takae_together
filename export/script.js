@@ -458,9 +458,10 @@
     var lastTrigger = null;
     var isOpen = false;
 
-    function srcset(id, orient, ext) {
+    function srcset(id, orient, ext, web) {
+      var prefix = web || BASE + 'web/rc-' + id;
       return WIDTHS[orient].map(function (w) {
-        return BASE + 'web/rc-' + id + '-' + w + '.' + ext + ' ' + w + 'w';
+        return prefix + '-' + w + '.' + ext + ' ' + w + 'w';
       }).join(', ');
     }
 
@@ -473,7 +474,7 @@
       ['avif', 'webp'].forEach(function (ext) {
         var source = document.createElement('source');
         source.type = 'image/' + ext;
-        source.srcset = srcset(id, orient, ext);
+        source.srcset = srcset(id, orient, ext, trigger.getAttribute('data-rg-web'));
         source.sizes = '100vw';
         picture.appendChild(source);
       });
