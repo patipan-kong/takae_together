@@ -440,12 +440,136 @@
     }
   }
 
+  function initGalleryLightbox() {
+    var dialog = document.getElementById('rg-lightbox');
+    if (!dialog) return;
+    var triggers = Array.prototype.slice.call(document.querySelectorAll('.rg-photo'));
+    if (!triggers.length) return;
+
+    var stage = dialog.querySelector('.rg-lightbox__stage');
+    var countEl = dialog.querySelector('.rg-lightbox__count');
+    var closeBtn = dialog.querySelector('.rg-lightbox__close');
+    var prevBtn = dialog.querySelector('.rg-lightbox__nav--prev');
+    var nextBtn = dialog.querySelector('.rg-lightbox__nav--next');
+    var hasModal = typeof dialog.showModal === 'function';
+    var BASE = 'assets/gallery/ratchaburi-e-card/';
+    var WIDTHS = { p: [480, 720, 1080], l: [800, 1200, 1800] };
+    var current = 0;
+    var lastTrigger = null;
+    var isOpen = false;
+
+    function srcset(id, orient, ext) {
+      return WIDTHS[orient].map(function (w) {
+        return BASE + 'web/rc-' + id + '-' + w + '.' + ext + ' ' + w + 'w';
+      }).join(', ');
+    }
+
+    function render() {
+      var trigger = triggers[current];
+      var id = trigger.getAttribute('data-rg-id');
+      var orient = trigger.getAttribute('data-rg-o');
+      var thumb = trigger.querySelector('img');
+      var picture = document.createElement('picture');
+      ['avif', 'webp'].forEach(function (ext) {
+        var source = document.createElement('source');
+        source.type = 'image/' + ext;
+        source.srcset = srcset(id, orient, ext);
+        source.sizes = '100vw';
+        picture.appendChild(source);
+      });
+      var img = document.createElement('img');
+      img.className = 'rg-lightbox__img';
+      img.alt = thumb ? thumb.alt : '';
+      img.decoding = 'async';
+      img.width = thumb ? thumb.getAttribute('width') : 0;
+      img.height = thumb ? thumb.getAttribute('height') : 0;
+      img.src = thumb ? thumb.getAttribute('src') : '';
+      picture.appendChild(img);
+      stage.innerHTML = '';
+      stage.appendChild(picture);
+      countEl.textContent = (current + 1) + ' / ' + triggers.length;
+    }
+
+    function go(step) {
+      current = (current + step + triggers.length) % triggers.length;
+      render();
+    }
+
+    function open(index) {
+      current = index;
+      lastTrigger = triggers[index];
+      render();
+      document.documentElement.classList.add('rg-lock');
+      if (hasModal) {
+        if (!dialog.open) dialog.showModal();
+      } else {
+        dialog.setAttribute('open', '');
+      }
+      isOpen = true;
+      closeBtn.focus();
+    }
+
+    function afterClose() {
+      if (!isOpen) return;
+      isOpen = false;
+      document.documentElement.classList.remove('rg-lock');
+      stage.innerHTML = '';
+      if (lastTrigger) lastTrigger.focus();
+    }
+
+    function close() {
+      if (hasModal) {
+        if (dialog.open) dialog.close();
+      } else {
+        dialog.removeAttribute('open');
+        afterClose();
+      }
+    }
+
+    triggers.forEach(function (trigger, index) {
+      trigger.addEventListener('click', function () { open(index); });
+    });
+    closeBtn.addEventListener('click', close);
+    prevBtn.addEventListener('click', function () { go(-1); });
+    nextBtn.addEventListener('click', function () { go(1); });
+    dialog.addEventListener('close', afterClose);
+
+    dialog.addEventListener('click', function (e) {
+      if (e.target === dialog || e.target === stage) close();
+    });
+
+    dialog.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft' || e.key === 'Left') { e.preventDefault(); go(-1); }
+      else if (e.key === 'ArrowRight' || e.key === 'Right') { e.preventDefault(); go(1); }
+      else if (!hasModal && (e.key === 'Escape' || e.key === 'Esc')) { e.preventDefault(); close(); }
+    });
+
+    var startX = 0;
+    var startY = 0;
+    var tracking = false;
+    dialog.addEventListener('touchstart', function (e) {
+      if (e.touches.length !== 1) { tracking = false; return; }
+      tracking = true;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+    dialog.addEventListener('touchend', function (e) {
+      if (!tracking) return;
+      tracking = false;
+      var t = e.changedTouches[0];
+      var dx = t.clientX - startX;
+      var dy = t.clientY - startY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) go(dx < 0 ? 1 : -1);
+    }, { passive: true });
+  }
+
   document.querySelectorAll('.section, #countdown, #story, #timeline, #dresscode, #experiences, #rsvp, #location, #faq').forEach(function (el) {
     el.setAttribute('data-reveal', '');
   });
 
   initStoryVideoMotion();
   initGalleryVideoMotion();
+  initGalleryLightbox();
 
   var langEnBtn = document.getElementById('lang-en');
   var langThBtn = document.getElementById('lang-th');

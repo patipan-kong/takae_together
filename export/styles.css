@@ -520,3 +520,230 @@ footer { padding: 88px 24px 64px; text-align: center; background: oklch(92% 0.02
   .gallery-item:nth-child(2) { margin-top: 20px; }
   .gallery-item:nth-child(4) { margin-top: 14px; }
 }
+
+/* ---------- gallery: Ratchaburi editorial (.rg-*) ---------- */
+.gallery-section { padding-inline: clamp(24px, 5.556vw, 80px); }
+.rg-inner { width: min(1280px, 100%); }
+.rg-chapter { margin-top: 72px; }
+.rg-chapter + .rg-chapter { margin-top: clamp(72px, 8vw, 116px); }
+.rg-chapter__head {
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+  margin: 0 0 56px;
+  padding-top: 24px;
+  border-top: 1px solid oklch(72% 0.025 110 / .6);
+  text-align: left;
+}
+.rg-chapter__eyebrow {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .28em;
+  color: oklch(43% 0.055 125);
+}
+.rg-chapter__title {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(24px, 5vw, 34px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: oklch(28% 0.03 95);
+}
+/* Spreads stay in document flow. Columns set hierarchy; a few role-based
+   insets provide the asymmetry without fixed heights or image coordinates. */
+.rg-spread {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+  text-align: left;
+}
+.rg-spread + .rg-spread { margin-top: clamp(64px, 7vw, 100px); }
+.rg-item { min-width: 0; margin: 0; }
+.rg-photo {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  line-height: 0;
+  cursor: zoom-in;
+  -webkit-tap-highlight-color: transparent;
+}
+.rg-photo picture { display: block; }
+.rg-photo img { display: block; width: 100%; height: auto; }
+.rg-photo:focus-visible,
+.rg-lightbox__btn:focus-visible {
+  outline: 3px solid oklch(55% 0.09 125);
+  outline-offset: -3px;
+}
+
+/* Lake: intimacy, playful interlude, then an embrace and a quiet departure. */
+.rg-spread--lake-opening {
+  grid-template-columns: minmax(0, 500fr) minmax(0, 340fr);
+  column-gap: 21%;
+  padding-right: 13%;
+}
+.rg-spread--lake-opening .rg-item--companion { margin-top: clamp(80px, 12vw, 170px); }
+.rg-spread--lake-scenes .rg-item--panorama { grid-column: 5 / -1; grid-row: 1; }
+.rg-spread--lake-scenes .rg-item--portrait {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  margin-top: clamp(160px, 22vw, 320px);
+}
+.rg-spread--lake-scenes .rg-item--detail {
+  grid-column: 5 / span 3;
+  grid-row: 2;
+  width: 85%;
+  margin-top: 32px;
+}
+.rg-spread--lake-scenes .rg-item--landscape { grid-column: 8 / -1; grid-row: 2; }
+.rg-spread--lake-closing { grid-template-columns: 26% 36% 20%; justify-content: space-between; column-gap: 0; }
+.rg-spread--lake-closing .rg-item--detail { margin-top: 20px; }
+.rg-spread--lake-closing .rg-item--trail { margin-top: clamp(96px, 18vw, 260px); }
+
+/* Meadow: reverse the balance, keep environmental views subordinate, and
+   finish with a wide reclining moment and the announcement as a coda. */
+.rg-spread--meadow-opening .rg-item--lead { grid-column: 8 / -1; grid-row: 1; width: 90%; justify-self: end; }
+.rg-spread--meadow-opening .rg-item--landscape { grid-column: 1 / span 6; grid-row: 1; margin-top: clamp(96px, 17vw, 240px); }
+.rg-spread--meadow-scenes .rg-item--context { grid-column: 1 / span 4; }
+.rg-spread--meadow-scenes .rg-item--companion { grid-column: 6 / -1; width: 90%; margin-top: clamp(48px, 8vw, 116px); }
+.rg-spread--meadow-portraits .rg-item--lead { grid-column: 1 / span 4; width: 90%; }
+.rg-spread--meadow-portraits .rg-item--companion { grid-column: 6 / span 3; margin-top: clamp(64px, 9vw, 128px); }
+.rg-spread--meadow-finale .rg-item--landscape { grid-column: 1 / span 8; }
+.rg-spread--meadow-finale .rg-item--trail { grid-column: 10 / -1; margin-top: 48px; }
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .rg-spread { column-gap: 16px; }
+  .rg-spread--lake-opening { column-gap: 18%; padding-right: 8%; }
+  .rg-spread--lake-closing { column-gap: 0; }
+}
+@media (max-width: 700px) {
+  .gallery-section { padding-inline: 18px; }
+  .rg-chapter { margin-top: 48px; }
+  .rg-chapter + .rg-chapter { margin-top: 64px; }
+  .rg-chapter__head { display: block; margin-bottom: 32px; padding-top: 22px; }
+  .rg-chapter__eyebrow { font-size: 9px; }
+  .rg-chapter__title { margin-top: 12px; }
+  .rg-spread { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 18px; }
+  .rg-spread + .rg-spread { margin-top: 64px; }
+  .rg-spread--lake-opening { display: flex; flex-direction: column; gap: 48px; padding: 0; }
+  .rg-spread--lake-opening .rg-item--lead { width: 76%; max-width: 380px; }
+  .rg-spread--lake-opening .rg-item--companion { width: 59%; max-width: 300px; margin: 0; align-self: end; }
+  .rg-spread--lake-scenes .rg-item--panorama { grid-column: 1 / -1; grid-row: 1; }
+  .rg-spread--lake-scenes .rg-item--portrait { grid-column: 1; grid-row: 2; margin: 0; }
+  .rg-spread--lake-scenes .rg-item--detail { grid-column: 2; grid-row: 2; width: 100%; margin-top: 48px; }
+  .rg-spread--lake-scenes .rg-item--landscape { grid-column: 1 / -1; grid-row: 3; }
+  .rg-spread--lake-closing { justify-content: normal; }
+  .rg-spread--lake-closing .rg-item--detail { grid-column: 1; grid-row: 1; margin: 0; }
+  .rg-spread--lake-closing .rg-item--lead { grid-column: 1 / -1; grid-row: 2; width: 82%; max-width: 380px; justify-self: center; margin-top: 16px; }
+  .rg-spread--lake-closing .rg-item--trail { grid-column: 2; grid-row: 1; margin-top: 48px; }
+  .rg-spread--meadow-opening { row-gap: 56px; }
+  .rg-spread--meadow-opening .rg-item--lead { grid-column: 1 / -1; grid-row: 1; width: 85%; max-width: 400px; justify-self: center; }
+  .rg-spread--meadow-opening .rg-item--landscape { grid-column: 1 / -1; grid-row: 2; margin: 0; }
+  .rg-spread--meadow-scenes { display: flex; flex-direction: column; gap: 48px; }
+  .rg-spread--meadow-scenes .rg-item--context,
+  .rg-spread--meadow-scenes .rg-item--companion { width: 77%; margin: 0; }
+  .rg-spread--meadow-scenes .rg-item--companion { align-self: end; }
+  .rg-spread--meadow-portraits .rg-item--lead { grid-column: 1; width: 100%; }
+  .rg-spread--meadow-portraits .rg-item--companion { grid-column: 2; margin-top: 64px; }
+  .rg-spread--meadow-finale { row-gap: 56px; }
+  .rg-spread--meadow-finale .rg-item--landscape { grid-column: 1 / -1; }
+  .rg-spread--meadow-finale .rg-item--trail { grid-column: 1 / -1; width: 67%; max-width: 300px; margin: 0; justify-self: end; }
+}
+
+
+/* ---------- gallery lightbox ---------- */
+html.rg-lock { overflow: hidden; }
+.rg-lightbox:not([open]) { display: none; }
+.rg-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: oklch(97% 0.012 85);
+  background: oklch(18% 0.02 90 / 0.95);
+  touch-action: none;
+  overscroll-behavior: contain;
+}
+.rg-lightbox[open] { display: flex; align-items: center; justify-content: center; }
+.rg-lightbox::backdrop { background: oklch(18% 0.02 90 / 0.95); }
+.rg-lightbox__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 64px 72px;
+  box-sizing: border-box;
+}
+.rg-lightbox__stage picture { display: block; }
+.rg-lightbox__img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - 144px);
+  max-height: calc(100vh - 128px);
+  max-height: calc(100dvh - 128px);
+  border-radius: 4px;
+  box-shadow: 0 20px 60px oklch(10% 0.02 90 / 0.5);
+}
+.rg-lightbox__count {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .2em;
+}
+.rg-lightbox__btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid oklch(97% 0.012 85 / 0.35);
+  border-radius: 50%;
+  color: inherit;
+  background: oklch(25% 0.02 90 / 0.55);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.rg-lightbox__btn:hover { background: oklch(35% 0.03 100 / 0.7); }
+.rg-lightbox__btn:focus-visible { outline-offset: 2px; outline-color: oklch(92% 0.05 100); }
+.rg-lightbox__close { top: 14px; right: 18px; }
+.rg-lightbox__nav { top: 50%; margin-top: -23px; }
+.rg-lightbox__nav--prev { left: 14px; }
+.rg-lightbox__nav--next { right: 14px; }
+@media (max-width: 700px) {
+  .rg-lightbox__stage { padding: 60px 10px 24px; }
+  .rg-lightbox__img {
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 100px);
+    max-height: calc(100dvh - 100px);
+  }
+  .rg-lightbox__btn { width: 42px; height: 42px; }
+  .rg-lightbox__nav { top: auto; bottom: 16px; margin-top: 0; }
+  .rg-lightbox__nav--prev { left: 16px; }
+  .rg-lightbox__nav--next { right: 16px; }
+  .rg-lightbox__stage { padding-bottom: 72px; }
+  .rg-lightbox__img {
+    max-height: calc(100vh - 148px);
+    max-height: calc(100dvh - 148px);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rg-lightbox[open] .rg-lightbox__img { animation: rg-fade .28s ease; }
+  @keyframes rg-fade { from { opacity: 0; } to { opacity: 1; } }
+}
