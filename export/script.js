@@ -12,7 +12,7 @@
         p1: "Being together has taught us how simple happiness can be. Over time, we have naturally become each other’s home, comfort, and safest place. Loving each other makes us want to grow, take better care of ourselves, and become better versions of ourselves every day. Through the difficult days and the happy ones, we’ve always been there for each other.",
         p2: "The day we decided to spend forever together will always hold a special place in our hearts. And now, as we look forward to our wedding on December 12th, 2026, we couldn’t be happier to begin this new chapter, side by side."
       },
-      timeline: { eyebrow_label: "Arrival", title: "When to Arrive", venue_note: "Upon arrival, please head to the 3rd floor first. Guest reception will begin there.", family_only: "Private Family Ceremony", engagement: "Chinese Engagement Ceremony", tea: "Tea Ceremony", welcome: "Guest Welcome", welcome_sub: "Reception begins", note: "We'll welcome everyone from 11:00. Lunch, conversation and celebration will follow naturally from there." },
+      timeline: { eyebrow_label: "Arrival", title: "When to Arrive", venue_note: "Upon arrival, please head to the 3rd floor first. Guest reception will begin there.", family_only: "Private Family Ceremony", engagement: "Chinese Engagement Ceremony", tea: "Tea Ceremony", welcome: "Guest Welcome", welcome_sub: "Reception begins", welcome_lunch: "Lunch service begins at 11:30.", note: "We look forward to welcoming you from 11:00. Lunch will be served from 11:30." },
       dress: { eyebrow: "Dress Code", title: "All Colours Are Welcome", desc: "Come dressed for a bright glasshouse lunch. Light fabrics and comfortable shoes are encouraged.", ivory: "Ivory", sage: "Sage", champagne: "Champagne", green: "Deep Sage", note: "Kindly reserve white & ivory tones for the bride" },
       exp: { eyebrow: "not activities — the things we'll remember", title: "What We'll Take Home", table_title: "one long table, one long conversation", table_desc: "No round tables — one long conversation instead.", photo_booth_caption: "Say whatever you want. We'll watch it back later.", cake_caption: "Strawberries and icing, in place of a formal cake-cutting.", perfume_kicker: "blend your own", perfume_caption: "THE LIBRARY · Warm & classic | TEA AT 4 · White tea & soft musk | THE GARNET · Orange blossom & moss | Mix the three however you like.", flowers_caption: "Take a photo. Keep the moment." },
       rsvp: {
@@ -21,8 +21,8 @@
         field_side: "Whose side are you joining?", side_groom: "Groom's side", side_bride: "Bride's side",
         field_first_name: "First name", field_last_name: "Last name",
         field_attending: "Will you join us?", yes: "Joyfully, yes", no: "Sadly, can't make it",
-        field_guests: "Number of guests (incl. you)", session_default: "You're joining us for the reception lunch — 11:00",
-        session_reveal: "Also invited to the morning ceremony? Let us know", session_lunch: "Reception lunch — 11:00", session_both: "Tea ceremony & reception (close family)",
+        field_guests: "Number of guests (incl. you)", session_default: "You're joining us for the reception lunch — 11:30",
+        session_reveal: "Also invited to the morning ceremony? Let us know", session_lunch: "Reception lunch — 11:30", session_both: "Tea ceremony & reception (close family)",
         dietary_note: "This helps us prepare food and seating for everyone.", field_dietary: "Dietary note", field_dietary_ph: "Allergies, vegetarian, etc. (optional)",
         field_contact: "Contact number", field_contact_ph: "So we can reach you if needed",
         field_message: "Message", submit: "Confirm my seat", submitting: "Sending...", deadline_note: "kindly reply by 12 November 2026",
@@ -41,7 +41,7 @@
         p1: "จากออเดอร์กาแฟธรรมดา เสียงหัวเราะที่แบ่งปัน และมิตรภาพที่ค่อยๆ เติบโต กลายเป็นช่วงเวลาที่ดีที่สุดของทุกวัน",
         p2: "วันนี้ท่ามกลางแสงอบอุ่นจากกระจกและคนที่เรารัก เราพร้อมเริ่มต้นบทใหม่ไปด้วยกัน"
       },
-      timeline: { eyebrow_label: "การมาถึง", title: "เวลามาถึง", venue_note: "เมื่อมาถึง กรุณาขึ้นไปที่ชั้น 3 ก่อน จุดต้อนรับแขกจะอยู่ที่ชั้น 3", family_only: "พิธีส่วนตัวของครอบครัว", engagement: "พิธีสู่ขอแบบจีน", tea: "พิธีรดน้ำชา", welcome: "ต้อนรับแขก", welcome_sub: "เริ่มงานเลี้ยงต้อนรับ", note: "เราจะพร้อมต้อนรับทุกคนตั้งแต่ 11:00 น. เป็นต้นไป มื้อกลางวัน บทสนทนา และการเฉลิมฉลองจะค่อยๆ เกิดขึ้นเองตามธรรมชาติ" },
+      timeline: { eyebrow_label: "การมาถึง", title: "เวลามาถึง", venue_note: "เมื่อมาถึง กรุณาขึ้นไปที่ชั้น 3 ก่อน จุดต้อนรับแขกจะอยู่ที่ชั้น 3", family_only: "พิธีส่วนตัวของครอบครัว", engagement: "พิธีสู่ขอแบบจีน", tea: "พิธีรดน้ำชา", welcome: "ต้อนรับแขก", welcome_sub: "เริ่มงานเลี้ยงต้อนรับ", welcome_lunch: "เริ่มเสิร์ฟอาหารกลางวันเวลา 11:30 น.", note: "เรายินดีต้อนรับทุกท่านตั้งแต่เวลา 11:00 น. และจะเริ่มเสิร์ฟอาหารกลางวันเวลา 11:30 น." },
       dress: { eyebrow: "การแต่งกาย", title: "อ่อนหวาน เรียบง่าย สบายตัว", desc: "แต่งกายสบายๆ โทนสีอ่อน เหมาะกับมื้อกลางวันในเรือนกระจกที่สว่างไสว ห้องจะแวววาวมากพอแล้ว ให้ชุดของคุณดูนุ่มนวล", ivory: "งาช้าง", sage: "เขียวเซจ", champagne: "แชมเปญ", green: "เขียวเข้ม", note: "ขอสงวนโทนสีขาวและงาช้างไว้สำหรับเจ้าสาว" },
       exp: { eyebrow: "ไม่ใช่กิจกรรม — แต่เป็นสิ่งที่เราจะจดจำ", title: "สิ่งที่เราจะพกกลับไป", table_title: "โต๊ะยาวหนึ่งโต๊ะ บทสนทนาที่ไม่รู้จบ", table_desc: "ครอบครัวและเพื่อนฝูง เคียงบ่าเคียงไหล่ — คำอวยพรจากพ่อแม่ เรื่องเล่าเก่าๆ ที่ถูกเล่าซ้ำ จานอาหารที่ส่งต่อกันด้วยมือ นี่คือหัวใจของวันนี้", photo_booth_caption: "ไม่ใช่กล้อง — แต่คือเสียงหัวเราะที่คุณจะเก็บไว้", cake_caption: "ไม่ใช่เค้ก — แต่คือความสุขที่ทุกคนมารวมตัวกัน", perfume_kicker: "ผสมน้ำหอมของคุณเอง", perfume_caption: "ไม่ใช่ของชำร่วย แต่เป็นกลิ่นที่จะกลายเป็นความทรงจำ อีกหลายปีข้างหน้า แค่ได้กลิ่นก็เหมือนกลับมาที่โต๊ะของเรา", flowers_caption: "ถ่ายรูป แล้วเก็บช่วงเวลานี้ไว้" },
       rsvp: {
@@ -50,7 +50,7 @@
         field_side: "คุณมาร่วมงานฝ่ายไหน?", side_groom: "ฝ่ายเจ้าบ่าว", side_bride: "ฝ่ายเจ้าสาว",
         field_first_name: "ชื่อจริง", field_last_name: "นามสกุล",
         field_attending: "จะมาร่วมงานกับเราไหม?", yes: "ยินดีอย่างยิ่งค่ะ/ครับ", no: "เสียดาย ไม่สามารถมาได้",
-        field_guests: "จำนวนผู้เข้าร่วม (รวมคุณ)", session_default: "คุณจะเข้าร่วมงานเลี้ยงมื้อกลางวัน — 11:00 น.",
+        field_guests: "จำนวนผู้เข้าร่วม (รวมคุณ)", session_default: "คุณจะเข้าร่วมงานเลี้ยงมื้อกลางวัน — 11:30 น.",
         session_reveal: "ได้รับเชิญร่วมพิธีช่วงเช้าด้วยหรือไม่? แจ้งเราได้เลย", session_lunch: "งานเลี้ยงมื้อกลางวัน — 11:00 น.", session_both: "พิธีรดน้ำชาและงานเลี้ยง (ญาติสนิท)",
         dietary_note: "ข้อมูลนี้ช่วยให้เราจัดเตรียมอาหารและที่นั่งให้ทุกคนได้พอดี", field_dietary: "ข้อมูลด้านอาหาร", field_dietary_ph: "แพ้อาหาร มังสวิรัติ ฯลฯ (ถ้ามี)",
         field_contact: "เบอร์ติดต่อ", field_contact_ph: "เผื่อเราต้องติดต่อกลับ",
