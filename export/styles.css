@@ -306,8 +306,13 @@ img { max-width: 100%; display: block; }
 .loc-map-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .loc-maplink { margin-bottom: 8px; }
 .loc-maplink a { font-size: 13px; color: oklch(48% 0.06 118); font-weight: 500; }
+.loc-parkinfo { margin: 28px 0 24px; text-align: center; }
+.loc-parkinfo-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 24px; color: oklch(25% 0.025 88); margin: 0 0 10px; }
+.loc-parkinfo-desc { font-size: 14px; line-height: 1.8; color: oklch(30% 0.025 90); margin: 0 0 16px; }
+.loc-parkinfo-map { display: block; border-radius: 10px; overflow: hidden; }
+.loc-parkinfo-map img { display: block; width: 100%; height: auto; }
 .loc-address-block { margin-bottom: 18px; }
-.loc-address-block p { font-size: 13.5px; line-height: 1.7; color: oklch(28% 0.025 88); margin: 0; }
+.loc-address-block p { text-align: center; font-size: 13.5px; line-height: 1.7; color: oklch(28% 0.025 88); margin: 0; }
 .loc-address-block a { color: oklch(48% 0.06 118); font-weight: 500; }
 .loc-address { text-align: center; font-size: 14px; color: oklch(30% 0.025 90); margin-bottom: 6px; }
 .loc-parking { text-align: center; font-size: 13px; color: oklch(45% 0.02 95); margin-bottom: 20px; }
